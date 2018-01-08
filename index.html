@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>RPS Popcode</title>
 
-  <head>
+     <!-- Link CSS here -->
+      <link type='text/css' rel='stylesheet' href='css/style.css' />
+      <!-- Link JQuery here -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <!-- Link script.js here -->
+      <script src='js/script.js'></script>
+        <!-- Latest compiled and minified Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-      <title>RPS Game</title>
-
-      <!-- Link CSS here -->
-      <link rel="stylesheet" href="./css/style.css">
-
-       <!-- Link JQuery here -->
-     <script src="jquery-3.2.1.min.js"></script>
-      
-      <!-- Link Javascript File here -->
-      <script href="./js/script.js"></script>
-      
-      <!-- Latest compiled and minified Bootstrap CSS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      
-  </head>
-
-  <body>
+    </head>
+    <body>
       <!-- TASK 1: In the div below. 
         1. In a header tag, add a title.
         2. In a paragraph tag, add instructions on how to play the game.
@@ -29,9 +23,9 @@
         6. Add a div to record the Winner.
      -->
     <div class="container text-center">
-<h1>RPS!! Who Will Win!!</h1>    
+<h1 id="h1">RPS!! Who Will Win!!</h1>    
 
-<p>Instruction:</p> 
+<h4>Instruction:</h4> 
 <p>Pick Rock, Paper, or Scissors to see if you can beat the computer. Type your answer and then press "shoot".</p>
 
                 <div class="container">
@@ -52,11 +46,28 @@
                 </div>
             </div>
         </div>
-        
+        <br><br><br>
 
-    
+        <div class="col-xs-4" id="PlayerChoice">
+            <h3>Player's Choice</h3>
+            <p id="PlayerChoiceValue"></p>
+            </div> 
+             
+       <div class="col-xs-4">
+        <input id="input">
+        <button id="button">SHOOT</button>
+             </div>
+
+            
+         <div class="col-xs-4" id="ComputerChoice">
+            <h3>Computer's Choice</h3>
+            <p id="ComputerChoiceValue"></p>
+            </div>
+            
+            <div id="Winner">Winner</div>
     </div>
 
-  </body>
-
+        
+    </body>
 </html>
+

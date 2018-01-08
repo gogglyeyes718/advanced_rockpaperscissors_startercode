@@ -1,3 +1,4 @@
+$(document).ready(function(){
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project
@@ -19,12 +20,90 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
+var PlayerChoice="";
+var ComputerChoice="";
+var Winner="";
+var RPS=
+["rock",
+"paper",
+"scissors"];
+
+$("#button").click(function(){
+    
+   var value = $("#input").val();
+   $("#PlayerChoiceValue").append("<p>" + value + "</p>");
+});
+
+$("#button").click(function(){
+
+var num = Math.floor(Math.random()*RPS.length);
+   
+   $("#ComputerChoiceValue").append("<p>" + RPS[num] + "</p>");
+});
 
 
+function selectWinner(PlayerChoice, ComputerChoice) {
+    
+    if (PlayerChoice === "scissors") {
+ 
+        if (ComputerChoice === "rock") {
+            return "computer wins";
+        } else if (ComputerChoice === "paper") {
+            return "user wins";
+        } else {
+            return "it's a tie";
+        }
+        
+    }
+    
+        if (PlayerChoice === "rock") {
+ 
+        if (ComputerChoice === "paper") {
+            return "computer wins";
+        } else if (ComputerChoice === "scissors") {
+            return "user wins";
+        } else {
+            return "it's a tie";
+        }
+        
+    }
+    
+        if (PlayerChoice === "paper") {
+ 
+        if (ComputerChoice === "scissors") {
+            return "computer wins";
+        } else if (ComputerChoice === "rock") {
+            return "user wins";
+        } else {
+            return "it's a tie";
+        }
+        
+    }
+    
+    // TODO - we need to handle the cases where the user chooses rock or paper
+}
 
-//FUNCTIONS
+
+//alert(winner);
+function getRandomChoice() {
+    var Choice = ["rock","paper","scissors"];
+
+    var randomIndex = Math.floor(Math.random() * Choice.length);
+
+    var randomChoice = Choice[randomIndex];
+    
+    return randomChoice;
+ 
+}
 
 
+//alert(name);
+    $("#button").click(function(){
+     var R = getRandomChoice();
+     var UserChoice =   $("input").val();
+          var winner = selectWinner(UserChoice, R);
+          alert(winner);
+          //
+});
 
-// DOCUMENT READY FUNCTION
-
+});
